@@ -1,0 +1,33 @@
+﻿title: BoxScript
+tags:
+---
+<<if get_spoken_to_player()>>
+    <<jump HasSpoken>>
+<<else>>
+    <<jump HasNotSpoken>>
+<<endif>>
+===
+
+title: HasSpoken
+position: 185,150
+---
+Box: We meet again strange person.
+-> I return with the thing. <<if get_player_has_thing()>>
+    Box: Incredible.
+-> Why are you a box anyway?
+    Box: I do not know...
+
+===
+title: HasNotSpoken
+position: -165,145
+---
+Box: Hello I am box.
+-> How are you talking right now?
+    Box: DO NOT QUESTION.
+-> ok
+    Box: ok
+-> I have the thing. <<if get_player_has_thing()>>
+    Box: Holy shit.
+
+<<call flag_box_as_player_spoken()>>
+===
