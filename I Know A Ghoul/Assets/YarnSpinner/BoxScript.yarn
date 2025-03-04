@@ -16,7 +16,6 @@ Box: We meet again strange person.
     Box: Incredible.
 -> Why are you a box anyway?
     Box: I do not know...
-<<flag_box_as_player_spoken()>>
 
 ===
 title: HasNotSpoken
@@ -29,4 +28,6 @@ Box: Hello I am box.
     Box: ok
 -> I have the thing. <<if get_player_has_thing()>>
     Box: Holy shit.
+
+<<call flag_box_as_player_spoken()>>
 ===
