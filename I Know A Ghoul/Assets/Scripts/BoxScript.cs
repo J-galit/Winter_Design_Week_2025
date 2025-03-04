@@ -33,15 +33,13 @@ public class BoxScript : MonoBehaviour
     }
 
     [YarnCommand ("flag_box_as_player_spoken")]
-<<<<<<< HEAD
     public bool flagAsSpokenToPlayer()
-=======
-    public void flagAsSpokenToPlayer()
->>>>>>> PhoneBranch
     {
 
         spokenToPlayer = true;
         Debug.Log("The box has spoken to the player.");
+
+        return true;
 
     }
 
