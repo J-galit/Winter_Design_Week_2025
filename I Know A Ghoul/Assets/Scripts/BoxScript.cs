@@ -33,6 +33,7 @@ public class BoxScript : MonoBehaviour
 
     }
 
+    [YarnCommand ("flag_box_as_player_spoken")]
     public bool flagAsSpokenToPlayer()
     {
 
