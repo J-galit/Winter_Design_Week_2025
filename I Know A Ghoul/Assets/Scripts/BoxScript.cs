@@ -16,7 +16,6 @@ public class BoxScript : MonoBehaviour
 
         diagRunner = GameObject.FindObjectOfType<DialogueRunner>();
         diagRunner.AddFunction<bool>("get_spoken_to_player", getSpokenToPlayer);
-        diagRunner.AddFunction<bool>("flag_box_as_player_spoken", flagAsSpokenToPlayer);
 
     }
 
@@ -34,13 +33,15 @@ public class BoxScript : MonoBehaviour
     }
 
     [YarnCommand ("flag_box_as_player_spoken")]
+<<<<<<< HEAD
     public bool flagAsSpokenToPlayer()
+=======
+    public void flagAsSpokenToPlayer()
+>>>>>>> PhoneBranch
     {
 
         spokenToPlayer = true;
         Debug.Log("The box has spoken to the player.");
-
-        return true;
 
     }
 
