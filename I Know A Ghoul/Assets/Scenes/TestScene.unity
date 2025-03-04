@@ -1061,7 +1061,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 449480675}
-  - component: {fileID: 449480674}
+  - component: {fileID: 449480676}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1069,18 +1069,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &449480674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 449480673}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11118582aed3d7342b28ec149c9fdae0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &449480675
 Transform:
   m_ObjectHideFlags: 0
@@ -1096,6 +1084,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &449480676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449480673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8efbbc7b4b3914d43bcfc4403a505f32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &450116081
 GameObject:
   m_ObjectHideFlags: 0
@@ -1697,7 +1697,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1533529302}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59bf44f788d2448448e891055b9f8dd0, type: 3}
+  m_Script: {fileID: 11500000, guid: bcfa54c5e5c3538488a44d254375dd2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hasThing: 0
@@ -1758,7 +1758,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1577802617}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c54af80352410546b9b9d9d5af53c68, type: 3}
+  m_Script: {fileID: 11500000, guid: 181be3991607c104b8d6c13dabb8dc78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   obtainedMessages: []
@@ -1871,7 +1871,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1850423784}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2489cc0e416082945a249536b657289e, type: 3}
+  m_Script: {fileID: 11500000, guid: 013b1398bf285594787454f0192758c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1949598800
@@ -2035,7 +2035,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 449480674}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: SpeakToBox
         m_Mode: 1
