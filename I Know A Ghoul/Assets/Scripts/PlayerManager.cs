@@ -11,7 +11,7 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] bool hasThing;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
 
         diagRunner = GameObject.FindObjectOfType<DialogueRunner>();

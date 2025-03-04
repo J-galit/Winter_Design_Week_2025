@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     DialogueRunner diagRunner;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
 
         diagRunner = GameObject.FindObjectOfType<DialogueRunner>();
