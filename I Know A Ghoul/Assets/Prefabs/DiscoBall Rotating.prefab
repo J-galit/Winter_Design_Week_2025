@@ -271,7 +271,7 @@ GameObject:
   - component: {fileID: 5116496564632558855}
   - component: {fileID: 5497384592134260668}
   m_Layer: 0
-  m_Name: DiscoBall
+  m_Name: DiscoBall Rotating
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
