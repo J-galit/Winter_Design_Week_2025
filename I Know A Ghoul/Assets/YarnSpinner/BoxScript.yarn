@@ -21,13 +21,23 @@ Box: We meet again strange person.
 title: HasNotSpoken
 position: -165,145
 ---
+
+<<declare $userInput = "Sample" as string>>
+
 Box: Hello I am box.
--> How are you talking right now?
-    Box: DO NOT QUESTION.
--> ok
-    Box: ok
--> I have the thing. <<if get_player_has_thing()>>
-    Box: Holy shit.
+<<user_text_prompt GameManager>>
+
+<<set $userInput to get_player_input()>>
+
+Debug: You have entered {$userInput}
+
+<<if $userInput == "pootus">>
+    Box: Pootis.
+<<elseif $userInput  == "yes">>
+    Box: no.
+<<else>>
+    Box: oh no.
+<<endif>>
 
 <<call flag_box_as_player_spoken()>>
 //Bluh
