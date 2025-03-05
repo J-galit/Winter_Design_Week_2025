@@ -139,6 +139,8 @@ namespace StarterAssets
 			GroundedCheck();
 			Move();
 			raycastInteractable();
+			print(_input.interact);
+			print(_input.jump);
 		}
 
 		private void LateUpdate()
@@ -175,7 +177,7 @@ namespace StarterAssets
 
                 
             }
-            //_mainCamera.GetComponent<CinemachineBrain>().enabled = false;
+            
             
 
         }
@@ -329,11 +331,12 @@ namespace StarterAssets
                     InteractScript characterScript = hitObject.GetComponent<InteractScript>();
 
 					characterScript.TalkToMe();
+					characterScript.TurnToPlayer();
 
-					_input.interact = false;
-					HandleCamera();
+				
 				}
             }
+            _input.interact = false;
         }
 
         void StartDialogue()
