@@ -119,17 +119,15 @@ namespace StarterAssets
 			_fallTimeoutDelta = FallTimeout;
 
 
-			_input.onInteract += OnInteractReciever;
+			
 		}
-        private void OnDisable()
-        {
-			_input.onInteract -= OnInteractReciever;
-        }
+       
         private void Update()
 		{
 			JumpAndGravity();
 			GroundedCheck();
 			Move();
+			raycastInteractable();
 		}
 
 		private void LateUpdate()
@@ -289,15 +287,28 @@ namespace StarterAssets
 		{
 
             _input.cursorInputForLook = false;
+			_input.SetCursorState(false);
+			Cursor.visible = true;
+            //_mainCamera.GetComponent<CinemachineBrain>().enabled = false;
         }
 
-		void OnInteractReciever()
+
+        void raycastInteractable()
 		{
-			RaycastHit _hit;
-			if (Physics.Raycast(_mainCamera.transform.position, _mainCamera.transform.forward, out _hit, raycastDistance, npcLayer))
-			{
-				print("hi");
-			}
-		}
+            RaycastHit _hit;
+            if (Physics.Raycast(_mainCamera.transform.position, _mainCamera.transform.forward, out _hit, raycastDistance, npcLayer))
+            {
+				print("hit");
+                if (_input.interact)
+				{
+					print("Talk");
+
+					_input.interact = false;
+					HandleCamera();
+				}
+            }
+        }
+
+		
 	}
 }

@@ -3,6 +3,7 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 #if ENABLE_INPUT_SYSTEM
 using UnityEngine.InputSystem;
+using static UnityEngine.Rendering.DebugUI;
 #endif
 
 namespace StarterAssets
@@ -47,12 +48,12 @@ namespace StarterAssets
 		public void OnSprint(InputValue value)
 		{
 			SprintInput(value.isPressed);
-		}
-
-		public void OnInteract()
+        }
+        public void OnInteract(InputValue value)
 		{
-			onInteract.Invoke();
-		}
+            InteractInput(value.isPressed);
+
+        }
 #endif
 
 
@@ -76,7 +77,7 @@ namespace StarterAssets
 			sprint = newSprintState;
 		}
 
-		public void Interact(bool newInteractState)
+		public void InteractInput(bool newInteractState)
 		{
 			interact = newInteractState;
 
