@@ -2,6 +2,7 @@
 using UnityEngine;
 #if ENABLE_INPUT_SYSTEM
 using UnityEngine.InputSystem;
+using Yarn.Unity;
 #endif
 
 namespace StarterAssets
@@ -69,9 +70,14 @@ namespace StarterAssets
 		private float _jumpTimeoutDelta;
 		private float _fallTimeoutDelta;
 
-	
+        //Dialogue System
+        public DialogueRunner dialogueRunner;
+
+		private bool isTalking;
+
+
 #if ENABLE_INPUT_SYSTEM
-		private PlayerInput _playerInput;
+        private PlayerInput _playerInput;
 #endif
 		private CharacterController _controller;
 		private StarterAssetsInputs _input;
@@ -119,8 +125,13 @@ namespace StarterAssets
 			_fallTimeoutDelta = FallTimeout;
 
 
-			
-		}
+            // Subscribe to dialogue complete event
+            dialogueRunner.onDialogueComplete.AddListener(EndDialogue);
+
+            // Optionally, lock cursor when dialogue starts
+            dialogueRunner.onDialogueStart.AddListener(StartDialogue);
+
+        }
        
         private void Update()
 		{
@@ -169,10 +180,15 @@ namespace StarterAssets
 
         }
 
-        private void Move()
+		private void Move()
 		{
-			// set target speed based on move speed, sprint speed and if sprint is pressed
-			float targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
+			if (isTalking)
+				return;
+			else
+			{
+
+				// set target speed based on move speed, sprint speed and if sprint is pressed
+				float targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
 
 			// a simplistic acceleration and deceleration designed to be easy to remove, replace, or iterate upon
 
@@ -214,53 +230,61 @@ namespace StarterAssets
 
 			// move the player
 			_controller.Move(inputDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
+			}	
 		}
 
 		private void JumpAndGravity()
 		{
-			if (Grounded)
+			if (isTalking)
 			{
-				// reset the fall timeout timer
-				_fallTimeoutDelta = FallTimeout;
-
-				// stop our velocity dropping infinitely when grounded
-				if (_verticalVelocity < 0.0f)
-				{
-					_verticalVelocity = -2f;
-				}
-
-				// Jump
-				if (_input.jump && _jumpTimeoutDelta <= 0.0f)
-				{
-					// the square root of H * -2 * G = how much velocity needed to reach desired height
-					_verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
-				}
-
-				// jump timeout
-				if (_jumpTimeoutDelta >= 0.0f)
-				{
-					_jumpTimeoutDelta -= Time.deltaTime;
-				}
+				return;
 			}
 			else
 			{
-				// reset the jump timeout timer
-				_jumpTimeoutDelta = JumpTimeout;
-
-				// fall timeout
-				if (_fallTimeoutDelta >= 0.0f)
+				if (Grounded)
 				{
-					_fallTimeoutDelta -= Time.deltaTime;
+					// reset the fall timeout timer
+					_fallTimeoutDelta = FallTimeout;
+
+					// stop our velocity dropping infinitely when grounded
+					if (_verticalVelocity < 0.0f)
+					{
+						_verticalVelocity = -2f;
+					}
+
+					// Jump
+					if (_input.jump && _jumpTimeoutDelta <= 0.0f)
+					{
+						// the square root of H * -2 * G = how much velocity needed to reach desired height
+						_verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
+					}
+
+					// jump timeout
+					if (_jumpTimeoutDelta >= 0.0f)
+					{
+						_jumpTimeoutDelta -= Time.deltaTime;
+					}
+				}
+				else
+				{
+					// reset the jump timeout timer
+					_jumpTimeoutDelta = JumpTimeout;
+
+					// fall timeout
+					if (_fallTimeoutDelta >= 0.0f)
+					{
+						_fallTimeoutDelta -= Time.deltaTime;
+					}
+
+					// if we are not grounded, do not jump
+					_input.jump = false;
 				}
 
-				// if we are not grounded, do not jump
-				_input.jump = false;
-			}
-
-			// apply gravity over time if under terminal (multiply by delta time twice to linearly speed up over time)
-			if (_verticalVelocity < _terminalVelocity)
-			{
-				_verticalVelocity += Gravity * Time.deltaTime;
+				// apply gravity over time if under terminal (multiply by delta time twice to linearly speed up over time)
+				if (_verticalVelocity < _terminalVelocity)
+				{
+					_verticalVelocity += Gravity * Time.deltaTime;
+				}
 			}
 		}
 
@@ -301,7 +325,10 @@ namespace StarterAssets
 				print("hit");
                 if (_input.interact)
 				{
-					print("Talk");
+                    GameObject hitObject = _hit.collider.gameObject;
+                    InteractScript characterScript = hitObject.GetComponent<InteractScript>();
+
+					characterScript.TalkToMe();
 
 					_input.interact = false;
 					HandleCamera();
@@ -309,6 +336,24 @@ namespace StarterAssets
             }
         }
 
-		
-	}
+        void StartDialogue()
+        {
+
+            _input.cursorInputForLook = false;
+            _input.SetCursorState(false);
+            Cursor.visible = true;
+			isTalking = true;
+        }
+
+        void EndDialogue()
+        {
+			// Unlock the cursor and restore player control
+			_input.cursorInputForLook = true;
+            _input.SetCursorState(true);
+            Cursor.visible = false;
+			isTalking = false;
+        }
+
+
+    }
 }
