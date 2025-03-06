@@ -27,5 +27,7 @@ Pavlo: *raises eyebrow, says nothing.*
     -> OK i'll do it man calm down
     You: Looks like memories from the club… might come in handy.”
 
-<<call flag_box_as_player_spokenB()>>
+<<call player_has_spoken_to_Bouncer()>>
+<<call TalkedToBouncer()>>
+
 ===
