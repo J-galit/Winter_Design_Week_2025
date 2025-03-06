@@ -145,7 +145,14 @@ namespace StarterAssets
 
 		private void LateUpdate()
 		{
-			CameraRotation();
+
+            if (!dialogueRunner.IsDialogueRunning)
+            {
+
+				CameraRotation();
+
+			}
+			
 		}
 
 		private void GroundedCheck()
