@@ -11,6 +11,8 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] bool hasThing;
     [SerializeField] bool visitSpot;
     [SerializeField] bool talkedToBouncer;
+    [SerializeField] bool hasSignature;
+    [SerializeField] bool hasDrink;
 
     // Start is called before the first frame update
     void Awake()
@@ -18,10 +20,19 @@ public class PlayerManager : MonoBehaviour
 
         diagRunner = GameObject.FindObjectOfType<DialogueRunner>();
         diagRunner.AddFunction<bool>("get_player_has_thing", getHasThing);
+        
         diagRunner.AddFunction<bool>("did_player_visit_spot", getDidPlayerVisitSpot);
+       
         diagRunner.AddFunction<bool>("getTalkedToBouncer", getTalkedToBouncer);
         diagRunner.AddFunction<bool>("TalkedToBouncer", TalkedToBouncer);
-        
+
+        diagRunner.AddFunction<bool>("getTalkedToBartender", getTalkedToBartender);
+        diagRunner.AddFunction<bool>("TalkedToBartender", TalkedToBartender);
+        diagRunner.AddFunction<bool>("HasSignature", getHasSignature);
+        diagRunner.AddFunction<bool>("giveSignature", giveSignature);
+
+        diagRunner.AddFunction<bool>("HasPinkDrink", getHasPinkDrink);
+        diagRunner.AddFunction<bool>("givePinkDrink", givePinkDrink);
 
     }
 
@@ -49,6 +60,42 @@ public class PlayerManager : MonoBehaviour
         talkedToBouncer = true;
         return true;
     }
+
+    //Bartender Functions
+
+    public bool getTalkedToBartender()
+    {
+        return talkedToBouncer;
+    }
+
+    public bool TalkedToBartender()
+    {
+        talkedToBouncer = true;
+        return true;
+    }
+
+    public bool getHasSignature()
+    {
+        return hasSignature;
+    }
+
+    public bool giveSignature()
+    {
+        hasSignature = true;
+        return true;
+    }
+
+    public bool getHasPinkDrink()
+    {
+        return hasDrink;
+    }
+
+    public bool givePinkDrink()
+    {
+        hasDrink = true;
+        return true;
+    }
+
 
     public bool getHasThing()
     {

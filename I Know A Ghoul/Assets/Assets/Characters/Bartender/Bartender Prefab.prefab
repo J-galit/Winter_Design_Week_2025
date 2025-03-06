@@ -1090,7 +1090,6 @@ GameObject:
   - component: {fileID: 5987772444124413408}
   - component: {fileID: 5828247653813849873}
   - component: {fileID: 4403196373139769326}
-  - component: {fileID: 6936138523479067167}
   m_Layer: 6
   m_Name: Bartender Prefab
   m_TagString: Untagged
@@ -1158,18 +1157,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   yarnScriptName: BartenderScript
   player: {fileID: 0}
---- !u!114 &6936138523479067167
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6364439480226031450}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48a73bac7aba2764fafd8e33ef2b978c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6648303812725341795
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,0 +1,10 @@
+﻿title: BoardScript
+tags:
+---
+<<if getTalkedToBartender()>>
+You: This must be the gamer Tabby was talking about. Good thing he signed it.
+<<call giveSignature()>>
+<<else>>
+You: Maybe I could use these Polaroids to get into the VIP section.
+<<endif>>
+===

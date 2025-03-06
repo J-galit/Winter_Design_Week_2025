@@ -18,8 +18,8 @@ Tabby: What's your poison?
         -> Shit, I've got no money.
     Tabby: You seem like a good kid. I'll make your drink, but you gotta do something for me.
         -> Anything, what is it?
-    Tabby: My daughter is a huge fan of this gamer, GremlinPlayz. If you can get something signed by him, I'll get that drink or you.
-    <<call HasSignature()>>
+    Tabby: My daughter is a huge fan of this gamer, GremlinPlayz. If you can get something signed by him, I'll get that drink for you.
+    <<call TalkedToBartender()>>
 ===
 
 title: HasSignature
@@ -51,4 +51,5 @@ title: pink
 position: 311,-146
 ---
 Tabby: A bit basic, but who am I to say, I just make the drink.
+<<call givePinkDrink()>>
 ===

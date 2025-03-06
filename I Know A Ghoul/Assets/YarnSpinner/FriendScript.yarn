@@ -67,8 +67,8 @@ position:
 Roxy: So what's her favourite drink?
     <<user_text_prompt GameManager>>
 
-    <<if get_player_input() == "pink">>
-        Roxy: Right answer.
+    <<if getPinkDrink()>>
+        Roxy: You already bought the drink?!
         <<set $drink = true>>
         <<if $band && $drink>>
             <<jump BothCorrect>>
@@ -76,7 +76,8 @@ Roxy: So what's her favourite drink?
             <<jump FavouriteBand>>
         <<endif>>
     <<else>>
-        Roxy: Wrong! Get out of my face before I make you!
+        -> Umm I don't have it on me.
+        Roxy: You should go buy it then if you want to meet Millie.
     <<endif>>
 ===
 
@@ -86,7 +87,7 @@ position:
 Roxy: So what's her favourite band?
     <<user_text_prompt GameManager>>
 
-    <<if get_player_input() == "pink">>
+    <<if get_player_input() == "Rolling Tombstones">>
         Roxy: Right answer.
         <<set $band = true>>
         <<if $band && $drink>>
