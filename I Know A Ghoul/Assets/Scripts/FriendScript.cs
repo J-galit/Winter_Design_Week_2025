@@ -32,7 +32,7 @@ public class FriendScript : MonoBehaviour
 
     }
 
-    [YarnCommand("flag_box_as_player_spoken")]
+    [YarnCommand("flag_box_as_player_spokenF")]
     public bool flagAsSpokenToPlayerF()
     {
 

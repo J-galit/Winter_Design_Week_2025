@@ -1,7 +1,7 @@
 ﻿title: FriendScript
 tags:
 ---
-<<if get_spoken_to_player()>>
+<<if get_spoken_to_playerF()>>
     <<jump HasSpokenToFriend>>
 <<else>>
     <<jump HasNotSpokenToFriend>>

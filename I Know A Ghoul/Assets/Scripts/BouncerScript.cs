@@ -32,7 +32,7 @@ public class BouncerScript : MonoBehaviour
 
     }
 
-    [YarnCommand("flag_box_as_player_spoken")]
+    [YarnCommand("flag_box_as_player_spokenBS")]
     public bool flagAsSpokenToPlayerB()
     {
 
