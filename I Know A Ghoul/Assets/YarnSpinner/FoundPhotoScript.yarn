@@ -1,0 +1,10 @@
+﻿title: FoundPhotoScript
+tags:
+---
+<<if getTalkedToPhotographer()>>
+You:This seems to match the photo. Hopefully this will jog his memory.
+<<call visitedSpot()>>
+<<else>>
+<<endif>>
+
+===

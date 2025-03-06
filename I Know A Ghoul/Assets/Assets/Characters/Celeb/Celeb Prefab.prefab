@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2565111321674731600}
   - component: {fileID: 8721938510515895106}
   - component: {fileID: 7123188499806183333}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Buns.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 5586347403408286779}
   - component: {fileID: 1014762456960011947}
   - component: {fileID: 7445925574018470531}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: EyeGlint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 64683667505489298}
   - component: {fileID: 9032607636266960022}
   - component: {fileID: 3162949106599983265}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 7324280324237093075}
   - component: {fileID: 4364978595986299402}
   - component: {fileID: 8627114510802814214}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Iris
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -343,7 +343,7 @@ GameObject:
   - component: {fileID: 5581900720404637226}
   - component: {fileID: 5236998757297853589}
   - component: {fileID: 9154786839635700687}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pupil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -426,7 +426,7 @@ GameObject:
   - component: {fileID: 6458970123612963366}
   - component: {fileID: 3132221677687673854}
   - component: {fileID: 5497289239769826975}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pants
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -509,7 +509,7 @@ GameObject:
   - component: {fileID: 4107364933331605877}
   - component: {fileID: 857579378296030482}
   - component: {fileID: 197411707107684122}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hands
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -592,7 +592,7 @@ GameObject:
   - component: {fileID: 764514155456531556}
   - component: {fileID: 338996570163122457}
   - component: {fileID: 6800903689328141828}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ShoulderSleeves
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -675,7 +675,7 @@ GameObject:
   - component: {fileID: 8177275740253707303}
   - component: {fileID: 5391464236816773095}
   - component: {fileID: 6509616249961655714}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Shirt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -758,7 +758,7 @@ GameObject:
   - component: {fileID: 2246019285724837177}
   - component: {fileID: 383209505514127135}
   - component: {fileID: 7410794359597528268}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -841,7 +841,7 @@ GameObject:
   - component: {fileID: 9186814625288786818}
   - component: {fileID: 177349150762539040}
   - component: {fileID: 4011532550213285616}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Shoes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -924,7 +924,7 @@ GameObject:
   - component: {fileID: 1323850153730452176}
   - component: {fileID: 7986891948551960621}
   - component: {fileID: 4613318586842386254}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mouth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1007,7 +1007,7 @@ GameObject:
   - component: {fileID: 5331085799086445794}
   - component: {fileID: 4964952221994500592}
   - component: {fileID: 8489795340919042362}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1090,7 +1090,7 @@ GameObject:
   - component: {fileID: 237955772280790581}
   - component: {fileID: 5558527366750294101}
   - component: {fileID: 5491194524724261133}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Nose
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1173,7 +1173,7 @@ GameObject:
   - component: {fileID: 2907683370833483468}
   - component: {fileID: 1628787875726316177}
   - component: {fileID: 7191837751817972265}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Iris.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1256,7 +1256,7 @@ GameObject:
   - component: {fileID: 5063084247485004792}
   - component: {fileID: 171063540112125896}
   - component: {fileID: 6483198931720639306}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1339,7 +1339,7 @@ GameObject:
   - component: {fileID: 7871834494105369012}
   - component: {fileID: 1758040538708944011}
   - component: {fileID: 3601908353530277699}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bottomlash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1422,7 +1422,7 @@ GameObject:
   - component: {fileID: 7647734223160862481}
   - component: {fileID: 7901720288837271801}
   - component: {fileID: 7901720288837271800}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Celeb Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1490,7 +1490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d2bf47068c634542932ceaf007db062, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yarnScriptName: 
+  yarnScriptName: MillieScript
   player: {fileID: 0}
 --- !u!1 &7311989297244005522
 GameObject:
@@ -1503,7 +1503,7 @@ GameObject:
   - component: {fileID: 6088210825036368576}
   - component: {fileID: 4419254792197140248}
   - component: {fileID: 5621699429058967516}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1586,7 +1586,7 @@ GameObject:
   - component: {fileID: 4125502616721992426}
   - component: {fileID: 3778030048122860285}
   - component: {fileID: 8306577994759602539}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Eyebrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1669,7 +1669,7 @@ GameObject:
   - component: {fileID: 6543052395012034484}
   - component: {fileID: 6637577998178721606}
   - component: {fileID: 3312192994997017044}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Buns
   m_TagString: Untagged
   m_Icon: {fileID: 0}

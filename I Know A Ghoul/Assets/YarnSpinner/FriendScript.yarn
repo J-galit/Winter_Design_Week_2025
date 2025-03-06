@@ -86,7 +86,7 @@ position:
 Roxy: So what's her favourite band?
     <<user_text_prompt GameManager>>
 
-    <<if get_player_input() == "The Rolling Tombstones">>
+    <<if get_player_input() == "the rolling tombstones">>
         Roxy: Right answer.
         <<set $band = true>>
         <<if $band && $drink>>
@@ -103,4 +103,5 @@ title: BothCorrect
 position:
 ---
 Roxy: Wow, I didn't expect you to get them right. I guess you can go talk to her now.
+<<call CanTalkToMillie()>>
 ===

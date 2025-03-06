@@ -11,8 +11,10 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] bool hasThing;
     [SerializeField] bool visitSpot;
     [SerializeField] bool talkedToBouncer;
+    [SerializeField] bool talkedToPhotographer;
     [SerializeField] bool hasSignature;
     [SerializeField] bool hasDrink;
+    [SerializeField] bool canTalkToMillie;
 
     // Start is called before the first frame update
     void Awake()
@@ -22,7 +24,9 @@ public class PlayerManager : MonoBehaviour
         diagRunner.AddFunction<bool>("get_player_has_thing", getHasThing);
         
         diagRunner.AddFunction<bool>("did_player_visit_spot", getDidPlayerVisitSpot);
-       
+        diagRunner.AddFunction<bool>("visitedSpot", visitedSpot);
+
+
         diagRunner.AddFunction<bool>("getTalkedToBouncer", getTalkedToBouncer);
         diagRunner.AddFunction<bool>("TalkedToBouncer", TalkedToBouncer);
 
@@ -34,6 +38,11 @@ public class PlayerManager : MonoBehaviour
         diagRunner.AddFunction<bool>("HasPinkDrink", getHasPinkDrink);
         diagRunner.AddFunction<bool>("givePinkDrink", givePinkDrink);
 
+        diagRunner.AddFunction<bool>("getTalkedToPhotographer", getTalkedToPhotographer);
+        diagRunner.AddFunction<bool>("TalkedToPhotographer", TalkedToPhotographer);
+
+        diagRunner.AddFunction<bool>("getCanTalkToMillie", getCanTalkToMillie);
+        diagRunner.AddFunction<bool>("CanTalkToMillie", CanTalkToMillie);
     }
 
     // Update is called once per frame
@@ -47,6 +56,12 @@ public class PlayerManager : MonoBehaviour
     public bool getDidPlayerVisitSpot()
     {
         return visitSpot;
+    }
+
+    public bool visitedSpot()
+    {
+        visitSpot = true;
+        return true;
     }
 
     //Bouncer Functions
@@ -95,6 +110,34 @@ public class PlayerManager : MonoBehaviour
         hasDrink = true;
         return true;
     }
+
+
+
+    //Photographer Functions
+    public bool getTalkedToPhotographer()
+    {
+        return talkedToPhotographer;
+    }
+
+    public bool TalkedToPhotographer()
+    {
+        talkedToPhotographer = true;
+        return true;
+    }
+
+    //Millie Functions
+    public bool getCanTalkToMillie()
+    {
+        return canTalkToMillie;
+    }
+
+    public bool CanTalkToMillie()
+    {
+        canTalkToMillie = true;
+        return true;
+    }
+
+
 
 
     public bool getHasThing()

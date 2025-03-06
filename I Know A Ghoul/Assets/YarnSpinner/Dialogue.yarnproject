@@ -6,7 +6,9 @@
     "**/FriendScript.yarn",
     "**/StartingScript.yarn",
     "**/PhotographerScript.yarn",
-    "**/BoardScript.yarn"
+    "**/BoardScript.yarn",
+    "**/FoundPhotoScript.yarn",
+    "**/MillieScript.yarn"
   ],
   "excludeFiles": [
     "**/*~/*"

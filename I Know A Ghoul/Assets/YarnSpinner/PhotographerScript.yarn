@@ -21,13 +21,17 @@ position: -165,145
 ---
 -> What's up brother?
 Sigma: Brother? It's Sigma to you, punk!
--> OK, sorry. Look I need your help.
-Sigma: What do you need?
--> *Show him the polaroid* You took this picture right? What shirt was Millie wearing that night?
-Sigma: Pfft... I'm 5 drinks in, doubt I'd remember your face in 3 minutes. 
-Sigma: Ya know what, if you can show me the spot that photo was taken, maybe I could conjure something up
+<<if getTalkedToBouncer()>>
+    -> OK, sorry. Look I need your help.
+    Sigma: What do you need?
+    -> *Show him the polaroid* You took this picture right? What shirt was Millie wearing that night?
+    Sigma: Pfft... I'm 5 drinks in, doubt I'd remember your face in 3 minutes. 
+    Sigma: Ya know what, if you can show me the spot that photo was taken, maybe I could conjure something up
+    <<call flag_box_as_player_spokenP()>>
+    <<call TalkedToPhotographer()>>
+<<endif>>
 
-<<call flag_box_as_player_spokenP()>>
+
 ===
 
 title: PlayerHasVisitedSpot

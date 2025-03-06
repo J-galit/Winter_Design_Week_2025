@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1372264141592921983}
   - component: {fileID: 2444807762124626712}
   - component: {fileID: 2933620944174805264}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hands
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 708985464969588235}
   - component: {fileID: 1981057270918856584}
   - component: {fileID: 7008808574573216517}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 3828199259162372915}
   - component: {fileID: 3412153268183212309}
   - component: {fileID: 5535880958542097094}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 6955165535672239901}
   - component: {fileID: 9140565182180881302}
   - component: {fileID: 2737867254955906083}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ears
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -343,7 +343,7 @@ GameObject:
   - component: {fileID: 3093626741989079960}
   - component: {fileID: 6291894385913830044}
   - component: {fileID: 139054299966645931}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -427,7 +427,7 @@ GameObject:
   - component: {fileID: 6160592106999035442}
   - component: {fileID: 3989208368640792090}
   - component: {fileID: 3801660913348349236}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Photographer_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -509,7 +509,7 @@ GameObject:
   - component: {fileID: 9112650320042546378}
   - component: {fileID: 1684153312508457234}
   - component: {fileID: 7210053589414455766}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -592,7 +592,7 @@ GameObject:
   - component: {fileID: 2785043297498194914}
   - component: {fileID: 1954648387887324100}
   - component: {fileID: 1958332516034309887}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -675,7 +675,7 @@ GameObject:
   - component: {fileID: 2974183153084366911}
   - component: {fileID: 7433423606844427871}
   - component: {fileID: 7367796639475773191}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Nose
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -758,7 +758,7 @@ GameObject:
   - component: {fileID: 3220003338089663452}
   - component: {fileID: 1429780811491950916}
   - component: {fileID: 3263897788515838534}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Vest
   m_TagString: Untagged
   m_Icon: {fileID: 0}

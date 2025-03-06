@@ -1,16 +1,19 @@
 ﻿title: MillieScript
 tags:
 ---
-Roxy: Hey Millie, I'd like to introduce you to someone.
-Millie: Oh, hey.
--> It's nice to finally meet you Millie.
-Millie: How are you enjoying the club so far?
--> It's been nice, it's got a good vibe here, good songs too. They were playing one of my favorite songs from the Rolling Tombstones earlier.
-Millie: You like the Rolling Tombstones too? They are the best. I actually went to one of their concerts recently.
--> Oh man, that must've been sick. Oh by the way, congrats on the new album!
-Millie: Thank you, that's actually what we're celebrating tonight. We were about to head into the VIP section to get some drinks.
--> I'd love a drink right now, a Djinn and Tonic would slap.
-Millie: I feel the same way, they make such great Djinn and Tonics, I could drink them all night. Say, why don’t you tag along with us to the VIP section. The drinks will be on me.
--> That would be great, thanks!
-
+<<if getCanTalkToMillie()>>
+    Roxy: Hey Millie, I'd like to introduce you to someone.
+    Millie: Oh, hey.
+    -> It's nice to finally meet you Millie.
+    Millie: How are you enjoying the club so far?
+    -> It's been nice, it's got a good vibe here, good songs too. They were playing one of my favorite songs from the Rolling Tombstones earlier.
+    Millie: You like the Rolling Tombstones too? They are the best. I actually went to one of their concerts recently.
+    -> Oh man, that must've been sick. Oh by the way, congrats on the new album!
+    Millie: Thank you, that's actually what we're celebrating tonight. We were about to head into the VIP section to get some drinks.
+    -> I'd love a drink right now, a Djinn and Tonic would slap.
+    Millie: I feel the same way, they make such great Djinn and Tonics, I could drink them all night. Say, why don't you tag along with us to the VIP section. The drinks will be on me.
+    -> That would be great, thanks!
+<<else>>
+    You: She can't hear me over the music.
+<<endif>>
 ===
