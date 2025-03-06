@@ -3,7 +3,8 @@
   "sourceFiles": [
     "**/BartenderScript.yarn",
     "**/BouncerScript.yarn",
-    "**/FriendScript.yarn"
+    "**/FriendScript.yarn",
+    "**/StartingScript.yarn"
   ],
   "excludeFiles": [
     "**/*~/*"
