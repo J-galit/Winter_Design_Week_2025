@@ -21,13 +21,21 @@ Box: We meet again strange person.
 title: HasNotSpoken
 position: -165,145
 ---
+
 Box: Hello I am box.
--> How are you talking right now?
-    Box: DO NOT QUESTION.
--> ok
-    Box: ok
--> I have the thing. <<if get_player_has_thing()>>
-    Box: Holy shit.
+<<user_text_prompt GameManager>>
+
+Debug: You have entered {get_player_input()}
+
+<<if get_player_input() == "pootus">>
+    Box: Pootis.
+<<elseif get_player_input()  == "yes">>
+    Box: no.
+<<elseif get_player_input() == "Sample">>
+    Box: It's still sample.
+<<else>>
+    Box: Oh no...
+<<endif>>
 
 <<call flag_box_as_player_spoken()>>
 //Bluh
