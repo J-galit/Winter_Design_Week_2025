@@ -32,7 +32,7 @@ public class BartenderScript : MonoBehaviour
 
     }
 
-    [YarnCommand("flag_box_as_player_spoken")]
+    [YarnCommand("flag_box_as_player_spokenBaretender")]
     public bool flagAsFavouriteDrink()
     {
 
