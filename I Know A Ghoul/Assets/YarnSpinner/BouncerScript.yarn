@@ -1,7 +1,7 @@
 ﻿title: BouncerScript
 tags:
 ---
-<<if get_spoken_to_player()>>
+<<if get_spoken_to_playerB()>>
     <<jump HasSpokenToBouncer>>
 <<else>>
     <<jump HasNotSpokenToBouncer>>
@@ -27,5 +27,5 @@ Pavlo: *raises eyebrow, says nothing.*
     -> OK i'll do it man calm down
     You: Looks like memories from the club… might come in handy.”
 
-<<call flag_box_as_player_spoken()>>
+<<call flag_box_as_player_spokenB()>>
 ===

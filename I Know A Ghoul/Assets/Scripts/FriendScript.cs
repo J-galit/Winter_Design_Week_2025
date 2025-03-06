@@ -14,8 +14,8 @@ public class FriendScript : MonoBehaviour
     {
 
         diagRunner = GameObject.FindObjectOfType<DialogueRunner>();
-        diagRunner.AddFunction<bool>("get_spoken_to_player", getSpokenToPlayer);
-        diagRunner.AddFunction<bool>("flag_box_as_player_spoken", flagAsSpokenToPlayer);
+        diagRunner.AddFunction<bool>("get_spoken_to_playerF", getSpokenToPlayerF);
+        diagRunner.AddFunction<bool>("flag_box_as_player_spokenF", flagAsSpokenToPlayerF);
 
     }
 
@@ -25,7 +25,7 @@ public class FriendScript : MonoBehaviour
 
     }
 
-    public bool getSpokenToPlayer()
+    public bool getSpokenToPlayerF()
     {
 
         return spokenToPlayer;
@@ -33,7 +33,7 @@ public class FriendScript : MonoBehaviour
     }
 
     [YarnCommand("flag_box_as_player_spoken")]
-    public bool flagAsSpokenToPlayer()
+    public bool flagAsSpokenToPlayerF()
     {
 
         spokenToPlayer = true;

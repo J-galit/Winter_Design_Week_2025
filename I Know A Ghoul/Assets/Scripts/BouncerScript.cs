@@ -14,8 +14,8 @@ public class BouncerScript : MonoBehaviour
     {
 
         diagRunner = GameObject.FindObjectOfType<DialogueRunner>();
-        diagRunner.AddFunction<bool>("get_spoken_to_player", getSpokenToPlayer);
-        diagRunner.AddFunction<bool>("flag_box_as_player_spoken", flagAsSpokenToPlayer);
+        diagRunner.AddFunction<bool>("get_spoken_to_playerB", getSpokenToPlayerB);
+        diagRunner.AddFunction<bool>("flag_box_as_player_spokenB", flagAsSpokenToPlayerB);
 
     }
 
@@ -25,7 +25,7 @@ public class BouncerScript : MonoBehaviour
 
     }
 
-    public bool getSpokenToPlayer()
+    public bool getSpokenToPlayerB()
     {
 
         return spokenToPlayer;
@@ -33,7 +33,7 @@ public class BouncerScript : MonoBehaviour
     }
 
     [YarnCommand("flag_box_as_player_spoken")]
-    public bool flagAsSpokenToPlayer()
+    public bool flagAsSpokenToPlayerB()
     {
 
         spokenToPlayer = true;
