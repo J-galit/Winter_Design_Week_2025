@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     public TMPro.TMP_InputField textField;
     [SerializeField] GameObject textBox;
 
+    bool continueButtonPressed = false;
+
     public InMemoryVariableStorage varStorage;
 
 
@@ -41,7 +43,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("enter coroutine");
         textBox.SetActive(true);
 
-        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.KeypadEnter) == true);
+        yield return new WaitUntil(() => continueButtonPressed == true);
 
         Debug.Log("Size of text["+textField.text.Length.ToString()+"]");
         if (textField.text.ToString() != "")
@@ -50,6 +52,7 @@ public class GameManager : MonoBehaviour
             userInput = textField.text.ToString().ToLower();
             textField.text = null;
             textBox.SetActive(false);
+            continueButtonPressed = false;
             yield return null;
 
         }
@@ -62,6 +65,13 @@ public class GameManager : MonoBehaviour
 
         Debug.Log("userInput is " + userInput);
         return userInput;
+
+    }
+
+    public void setContinueTrue()
+    {
+
+        continueButtonPressed = true;
 
     }
 
