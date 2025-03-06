@@ -9,7 +9,11 @@ public class GameManager : MonoBehaviour
 
     DialogueRunner diagRunner;
     string userInput = "";
-    public TextMeshProUGUI textField;
+    //InputField is a Unity/TMP thing that manages the input of text
+    //The text underneath it is doing a bunch of stuff that we may not understand
+    //We can access the text value of the input field by using:
+    //TMP_InputField rather than TMP_Text - Keely Brown
+    public TMPro.TMP_InputField textField;
     [SerializeField] GameObject textBox;
 
     public InMemoryVariableStorage varStorage;
@@ -37,8 +41,9 @@ public class GameManager : MonoBehaviour
         Debug.Log("enter coroutine");
         textBox.SetActive(true);
 
-        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space) == true);
+        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.KeypadEnter) == true);
 
+        Debug.Log("Size of text["+textField.text.Length.ToString()+"]");
         if (textField.text.ToString() != "")
         {
             Debug.Log("second if accessed");

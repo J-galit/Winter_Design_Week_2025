@@ -35,8 +35,10 @@ Debug: You have entered {$userInput}
     Box: Pootis.
 <<elseif $userInput  == "yes">>
     Box: no.
+<<elseif $userInput == "Sample">>
+    Box: It's still sample.
 <<else>>
-    Box: oh no.
+    Box: Oh no...
 <<endif>>
 
 <<call flag_box_as_player_spoken()>>
