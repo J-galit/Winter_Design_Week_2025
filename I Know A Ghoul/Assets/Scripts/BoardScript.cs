@@ -8,6 +8,10 @@ public class BoardScript : InteractScript
     [SerializeField] string yarnScriptName; //The string for this character/item's Yarn Script.
     DialogueRunner diagRunner; //Dialog runner.
 
+    void Awake()
+    {
+        diagRunner = GameObject.FindObjectOfType<DialogueRunner>();
+    }
     public override void TalkToMe()
     {
 
@@ -30,10 +34,7 @@ public class BoardScript : InteractScript
     }
 
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+ 
 
     // Update is called once per frame
     void Update()

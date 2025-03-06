@@ -84,7 +84,7 @@ public class PlayerManager : MonoBehaviour
         hasSignature = true;
         return true;
     }
-
+    [YarnCommand("HasPinkDrink")]
     public bool getHasPinkDrink()
     {
         return hasDrink;

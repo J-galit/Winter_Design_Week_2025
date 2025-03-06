@@ -65,9 +65,8 @@ title: FavouriteDrink
 position:
 ---
 Roxy: So what's her favourite drink?
-    <<user_text_prompt GameManager>>
 
-    <<if getPinkDrink()>>
+    <<if HasPinkDrink()>>
         Roxy: You already bought the drink?!
         <<set $drink = true>>
         <<if $band && $drink>>
@@ -87,7 +86,7 @@ position:
 Roxy: So what's her favourite band?
     <<user_text_prompt GameManager>>
 
-    <<if get_player_input() == "Rolling Tombstones">>
+    <<if get_player_input() == "The Rolling Tombstones">>
         Roxy: Right answer.
         <<set $band = true>>
         <<if $band && $drink>>
