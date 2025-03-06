@@ -1,0 +1,30 @@
+﻿title: BartenderScript
+tags:
+---
+<<if isFavouriteDrinkKnown()>>
+    <<jump FavouriteDrinkKnown>>
+<<else>>
+    <<jump FavouriteDrinkUnknown>>
+<<endif>> 
+===
+
+title: FavouriteDrinkKnown
+position: 185,150
+---
+Tabby: You got your info now scram.
+-> I just wanted to talk //<<if get_player_has_thing()>>
+    Tabby: I'm working.
+-> I like your hair!
+    Tabby: I do too!
+===
+title: FavouriteDrinkUnknown
+position: -165,145
+---
+Tabby: Hello I am Tabby
+-> Tell me Millie's favourite drink?
+    Box: Pink you nerd. 
+    <<call FavouriteDrinkIsKnown()>>
+-> You're pretty
+    Box: ok
+
+===

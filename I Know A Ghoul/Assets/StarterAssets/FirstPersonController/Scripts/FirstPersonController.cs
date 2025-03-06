@@ -331,7 +331,7 @@ namespace StarterAssets
                     InteractScript characterScript = hitObject.GetComponent<InteractScript>();
 
 					characterScript.TalkToMe();
-					characterScript.TurnToPlayer();
+					//characterScript.TurnToPlayer();
 
 				
 				}

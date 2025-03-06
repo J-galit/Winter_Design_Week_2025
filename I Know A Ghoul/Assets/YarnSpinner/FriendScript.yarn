@@ -1,0 +1,53 @@
+﻿title: FriendScript
+tags:
+---
+<<if get_spoken_to_player()>>
+    <<jump HasSpokenToFriend>>
+<<else>>
+    <<jump HasNotSpokenToFriend>>
+<<endif>>
+===
+title: HasSpokenToFriend
+position: 185,150
+---
+Roxy: Do you even know what we are here for? Let's start with that..
+    -> Her birthday?
+        Roxy: Wrong, Get lost!
+    -> Her new Album released today!
+        Roxy: You're good! But not good enough… if you really wanna get close with her, I got a couple more things for you to figure out
+        ->Favorite Drink
+        You: Uh, I'll be right back.
+        ->Favorite Band
+        You: Uh, I'll be right back.
+
+
+===
+title: HasNotSpokenToFriend
+position: -165,145
+---
+You: Hey, crazy night huh?
+Roxy: Sure is…
+-> Don't think I've seen you around.. Lemme get your name.
+   Roxy: *Reads his mind and gives him a nasty look*
+   Roxy:  … You're not as slick as you think you know that?
+    -> Wh- What do you mean?
+    Roxy: I read minds dumbass! I know you wanna talk to Millie!
+    -> Well I just thought I could maybe have a convo with her-
+    Roxy: Nope!  You're gonna have to do more than that if you want in on our circle
+    -> My bad..
+    Roxy: Do you even know what we are here for? Let's start with that..
+    -> Her birthday?
+        Roxy: Wrong, Get lost!
+    -> Her new Album released today!
+        Roxy: You're good! But not good enough… if you really wanna get close with her, I got a couple more things for you to figure out
+        ->Favorite Drink
+            You: Uh, I'll be right back.
+        ->Favorite Band
+            You: Uh, I'll be right back.
+
+//<<call flag_box_as_player_spoken()>>
+===
+
+
+
+

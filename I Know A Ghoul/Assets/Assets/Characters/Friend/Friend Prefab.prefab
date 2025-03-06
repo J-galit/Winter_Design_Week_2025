@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4632674462869395173}
   - component: {fileID: 4414264065996758343}
   - component: {fileID: 621316716005700503}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Shoes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 7327326683069412818}
   - component: {fileID: 2821696654503070675}
   - component: {fileID: 2558682212619555602}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Legs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 2314843030079090782}
   - component: {fileID: 4208016647318010488}
   - component: {fileID: 6479802384413258155}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 447199409932426258}
   - component: {fileID: 3806162075720351861}
   - component: {fileID: 4434311967368358525}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hands
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -343,7 +343,7 @@ GameObject:
   - component: {fileID: 8233260694416270157}
   - component: {fileID: 8617920754241999346}
   - component: {fileID: 4627688289988587176}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pupil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -426,7 +426,7 @@ GameObject:
   - component: {fileID: 6526171046656208308}
   - component: {fileID: 263191418424221549}
   - component: {fileID: 5227875610133266529}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Iris
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -509,7 +509,7 @@ GameObject:
   - component: {fileID: 3314629368602114312}
   - component: {fileID: 2956130389402746390}
   - component: {fileID: 1306604919350959020}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Horn1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -592,7 +592,7 @@ GameObject:
   - component: {fileID: 2627969136343107188}
   - component: {fileID: 8995620631997352800}
   - component: {fileID: 9166992347992249035}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Shorts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -675,7 +675,7 @@ GameObject:
   - component: {fileID: 4598529986570625269}
   - component: {fileID: 4786986734288454129}
   - component: {fileID: 1500123839146687942}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -758,7 +758,7 @@ GameObject:
   - component: {fileID: 8264737014897353052}
   - component: {fileID: 3540294191427357644}
   - component: {fileID: 6368567064062793700}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: EyeGlint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -841,7 +841,7 @@ GameObject:
   - component: {fileID: 465055068639571853}
   - component: {fileID: 818192320208074650}
   - component: {fileID: 5508583449957499916}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Eyebrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -924,7 +924,7 @@ GameObject:
   - component: {fileID: 6100807666187138277}
   - component: {fileID: 2210505650674668678}
   - component: {fileID: 1233018880446001401}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Choker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1007,7 +1007,7 @@ GameObject:
   - component: {fileID: 243759971768453810}
   - component: {fileID: 8559424946025879154}
   - component: {fileID: 2382185333761713355}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1090,7 +1090,7 @@ GameObject:
   - component: {fileID: 7730750531900149671}
   - component: {fileID: 171373227786070655}
   - component: {fileID: 8156236642126557883}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1173,7 +1173,8 @@ GameObject:
   - component: {fileID: 6131292567820624502}
   - component: {fileID: 2390793329888070150}
   - component: {fileID: 7400812184501346378}
-  m_Layer: 0
+  - component: {fileID: 3146383719809873626}
+  m_Layer: 6
   m_Name: Friend Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1239,8 +1240,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d2bf47068c634542932ceaf007db062, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yarnScriptName: 
+  yarnScriptName: FriendScript
   player: {fileID: 0}
+--- !u!114 &3146383719809873626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6799708343997872332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a1eb3a2fc635b34d84aa335951bbd85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6961212257717049002
 GameObject:
   m_ObjectHideFlags: 0
@@ -1252,7 +1265,7 @@ GameObject:
   - component: {fileID: 5911766265281133779}
   - component: {fileID: 2833150460889833964}
   - component: {fileID: 1065104932652591652}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bottomlash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1335,7 +1348,7 @@ GameObject:
   - component: {fileID: 8752534320298671775}
   - component: {fileID: 4425686830927473327}
   - component: {fileID: 7407432717355161133}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1418,7 +1431,7 @@ GameObject:
   - component: {fileID: 4357773980613335890}
   - component: {fileID: 8221133016363783474}
   - component: {fileID: 8286671180902659178}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Nose
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1501,7 +1514,7 @@ GameObject:
   - component: {fileID: 3272935401682775991}
   - component: {fileID: 5900749269651225930}
   - component: {fileID: 9165180472649288233}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mouth
   m_TagString: Untagged
   m_Icon: {fileID: 0}

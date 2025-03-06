@@ -1,0 +1,31 @@
+﻿title: BouncerScript
+tags:
+---
+<<if get_spoken_to_player()>>
+    <<jump HasSpokenToBouncer>>
+<<else>>
+    <<jump HasNotSpokenToBouncer>>
+<<endif>>
+===
+title: HasSpokenToBouncer
+position: 185,150
+---
+Pavlo: What are you still hanging around here for?
+
+
+===
+title: HasNotSpokenToBouncer
+position: -165,145
+---
+Pavlo: *raises eyebrow, says nothing.*
+-> Hey Can I, uh, get into this vip section? 
+   Pavlo: Well, are you on the list buddy?
+    -> Don't think I am, but I am friends with Billie Ghoulish.. She gave me the pass…
+    Pavlo: Ouuuu BIG guy thinks he knows BIG celebrity! Yeah, I'm sure you do bub and I'm married to Zomdeya! Back up!
+    Pavlo: *Pushes you into the wall and you make the polaroid board fall down with all the captions*
+    Pavlo: And now you make a mess of the polaroids… Look at this mess!
+    -> OK i'll do it man calm down
+    You: Looks like memories from the club… might come in handy.”
+
+<<call flag_box_as_player_spoken()>>
+===

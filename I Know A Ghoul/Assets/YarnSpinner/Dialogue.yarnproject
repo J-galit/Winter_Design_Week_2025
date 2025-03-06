@@ -1,7 +1,9 @@
 {
   "projectFileVersion": 2,
   "sourceFiles": [
-    "**/BoxScript.yarn"
+    "**/BartenderScript.yarn",
+    "**/BouncerScript.yarn",
+    "**/FriendScript.yarn"
   ],
   "excludeFiles": [
     "**/*~/*"
