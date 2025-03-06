@@ -22,20 +22,16 @@ title: HasNotSpoken
 position: -165,145
 ---
 
-<<declare $userInput = "Sample" as string>>
-
 Box: Hello I am box.
 <<user_text_prompt GameManager>>
 
-<<set $userInput to get_player_input()>>
+Debug: You have entered {get_player_input()}
 
-Debug: You have entered {$userInput}
-
-<<if $userInput == "pootus">>
+<<if get_player_input() == "pootus">>
     Box: Pootis.
-<<elseif $userInput  == "yes">>
+<<elseif get_player_input()  == "yes">>
     Box: no.
-<<elseif $userInput == "Sample">>
+<<elseif get_player_input() == "Sample">>
     Box: It's still sample.
 <<else>>
     Box: Oh no...
