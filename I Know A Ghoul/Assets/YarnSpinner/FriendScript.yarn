@@ -1,17 +1,10 @@
 ﻿title: FriendScript
 tags:
 ---
-<<declare $drink = false>>
-<<declare $band = false>>
-
-<<if $band && $drink>>
-    <<jump BothCorrect>>
-<<elseif get_spoken_to_playerF()>>
+<<if get_spoken_to_playerF()>>
     <<jump HasSpokenToFriend>>
-<<elseif getTalkedToBouncer()>>
-    <<jump HasNotSpokenToFriend>>
 <<else>>
-    <<jump HasNotSpokenToBouncerRoxy>>
+    <<jump HasNotSpokenToFriend>>
 <<endif>>
 ===
 title: HasSpokenToFriend
@@ -23,10 +16,9 @@ Roxy: Do you even know what we are here for? Let's start with that..
     -> Her new Album released today!
         Roxy: You're good! But not good enough… if you really wanna get close with her, I got a couple more things for you to figure out
         ->Favorite Drink
-            <<jump FavouriteDrink>>
+        You: Uh, I'll be right back.
         ->Favorite Band
-            <<jump FavouriteBand>>
-        ->Uh, I'll be right back.
+        You: Uh, I'll be right back.
 
 
 ===
@@ -45,62 +37,17 @@ Roxy: Sure is…
     -> My bad..
     Roxy: Do you even know what we are here for? Let's start with that..
     -> Her birthday?
-        Roxy: Wrong! Get out of here before I make you!
+        Roxy: Wrong, Get lost!
     -> Her new Album released today!
         Roxy: You're good! But not good enough… if you really wanna get close with her, I got a couple more things for you to figure out
         ->Favorite Drink
-            <<jump FavouriteDrink>>
+            You: Uh, I'll be right back.
         ->Favorite Band
-            <<jump FavouriteBand>>
-        ->Uh, I'll be right back.
-<<call player_has_spoken_Friend()>>
-===
-title: HasNotSpokenToBouncerRoxy
-position:
----
-Roxy: Get Lost!
+            You: Uh, I'll be right back.
+
+//<<call flag_box_as_player_spoken()>>
 ===
 
-title: FavouriteDrink
-position:
----
-Roxy: So what's her favourite drink?
-    <<user_text_prompt GameManager>>
 
-    <<if get_player_input() == "pink">>
-        Roxy: Right answer.
-        <<set $drink = true>>
-        <<if $band && $drink>>
-            <<jump BothCorrect>>
-        <<elseif $band ==  false>>
-            <<jump FavouriteBand>>
-        <<endif>>
-    <<else>>
-        Roxy: Wrong! Get out of my face before I make you!
-    <<endif>>
-===
 
-title: FavouriteBand
-position:
----
-Roxy: So what's her favourite band?
-    <<user_text_prompt GameManager>>
 
-    <<if get_player_input() == "pink">>
-        Roxy: Right answer.
-        <<set $band = true>>
-        <<if $band && $drink>>
-            <<jump BothCorrect>>
-        <<elseif $drink ==  false>>
-            <<jump FavouriteDrink>>
-        <<endif>>
-    <<else>>
-        Roxy: Wrong! Get out of my face before I make you!
-    <<endif>>
-===
-
-title: BothCorrect
-position:
----
-Roxy: Wow, I didn't expect you to get them right. I guess you can go talk to her now.
-===

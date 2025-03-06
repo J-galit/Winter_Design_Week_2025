@@ -9,8 +9,6 @@ public class PlayerManager : MonoBehaviour
     DialogueRunner diagRunner;
 
     [SerializeField] bool hasThing;
-    [SerializeField] bool visitSpot;
-    [SerializeField] bool talkedToBouncer;
 
     // Start is called before the first frame update
     void Awake()
@@ -18,9 +16,6 @@ public class PlayerManager : MonoBehaviour
 
         diagRunner = GameObject.FindObjectOfType<DialogueRunner>();
         diagRunner.AddFunction<bool>("get_player_has_thing", getHasThing);
-        diagRunner.AddFunction<bool>("did_player_visit_spot", getDidPlayerVisitSpot);
-        diagRunner.AddFunction<bool>("getTalkedToBouncer", getTalkedToBouncer);
-        diagRunner.AddFunction<bool>("TalkedToBouncer", TalkedToBouncer);
         
 
     }
@@ -29,25 +24,6 @@ public class PlayerManager : MonoBehaviour
     void Update()
     {
         
-    }
-
-
-    //Photographer Functions
-    public bool getDidPlayerVisitSpot()
-    {
-        return visitSpot;
-    }
-
-    //Bouncer Functions
-    public bool getTalkedToBouncer()
-    {
-        return talkedToBouncer;
-    }
-
-    public bool TalkedToBouncer()
-    {
-        talkedToBouncer = true;
-        return true;
     }
 
     public bool getHasThing()
@@ -63,8 +39,5 @@ public class PlayerManager : MonoBehaviour
         hasThing = true;
 
     }
-
-   
-
 
 }

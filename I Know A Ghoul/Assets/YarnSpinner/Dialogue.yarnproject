@@ -4,9 +4,7 @@
     "**/BartenderScript.yarn",
     "**/BouncerScript.yarn",
     "**/FriendScript.yarn",
-    "**/StartingScript.yarn",
-    "**/PhotographerScript.yarn",
-    "**/*.yarn"
+    "**/StartingScript.yarn"
   ],
   "excludeFiles": [
     "**/*~/*"
