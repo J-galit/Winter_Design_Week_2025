@@ -1,30 +1,54 @@
 ﻿title: BartenderScript
 tags:
+position: -381,-259
 ---
-<<if isFavouriteDrinkKnown()>>
-    <<jump FavouriteDrinkKnown>>
+<<if HasSignature()>>
+    <<jump HasSignature>>
 <<else>>
     <<jump FavouriteDrinkUnknown>>
 <<endif>> 
 ===
 
-title: FavouriteDrinkKnown
-position: 185,150
----
-Tabby: You got your info now scram.
--> I just wanted to talk //<<if get_player_has_thing()>>
-    Tabby: I'm working.
--> I like your hair!
-    Tabby: I do too!
-===
 title: FavouriteDrinkUnknown
-position: -165,145
+position: -207,109
 ---
-Tabby: Hello I am Tabby
--> Tell me Millie's favourite drink?
-    Box: Pink you nerd. 
-    <<call FavouriteDrinkIsKnown()>>
--> You're pretty
-    Box: ok
+Tabby: What's your poison?
+-> Can I get a drink please?
+    Tabby: Sure thing, it'll be $5
+        -> Shit, I've got no money.
+    Tabby: You seem like a good kid. I'll make your drink, but you gotta do something for me.
+        -> Anything, what is it?
+    Tabby: My daughter is a huge fan of this gamer, GremlinPlayz. If you can get something signed by him, I'll get that drink or you.
+    <<call HasSignature()>>
+===
 
+title: HasSignature
+position: -23,-181
+---
+Tabby: No way, you actually got it!
+    -> How about that drink now?
+Tabby: *sighs* What will it be?
+    -> Snake Shot | green
+        <<jump green>>
+    -> Viper Vodka | blue
+        <<jump blue>>
+    -> Djinn and Tonic | pink
+        <<jump pink>>
+===
+title: blue
+position:
+---
+Tabby: A nice mellow taste for a mellow girl.
+===
+
+title: green
+position: 280,-336
+---
+Tabby: This one's got a kick to it.
+===
+
+title: pink
+position: 311,-146
+---
+Tabby: A bit basic, but who am I to say, I just make the drink.
 ===
