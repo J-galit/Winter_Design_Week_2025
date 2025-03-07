@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Yarn.Unity;
 
 public class PlayerManager : MonoBehaviour
@@ -11,10 +12,15 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] bool hasThing;
     [SerializeField] bool visitSpot;
     [SerializeField] bool talkedToBouncer;
+    [SerializeField] bool talkedToBartender;
     [SerializeField] bool talkedToPhotographer;
     [SerializeField] bool hasSignature;
     [SerializeField] bool hasDrink;
     [SerializeField] bool canTalkToMillie;
+    
+    [SerializeField] bool gameOver;
+
+    public bool almostDone;
 
     // Start is called before the first frame update
     void Awake()
@@ -22,7 +28,7 @@ public class PlayerManager : MonoBehaviour
 
         diagRunner = GameObject.FindObjectOfType<DialogueRunner>();
         diagRunner.AddFunction<bool>("get_player_has_thing", getHasThing);
-        
+
         diagRunner.AddFunction<bool>("did_player_visit_spot", getDidPlayerVisitSpot);
         diagRunner.AddFunction<bool>("visitedSpot", visitedSpot);
 
@@ -43,12 +49,21 @@ public class PlayerManager : MonoBehaviour
 
         diagRunner.AddFunction<bool>("getCanTalkToMillie", getCanTalkToMillie);
         diagRunner.AddFunction<bool>("CanTalkToMillie", CanTalkToMillie);
+
+        diagRunner.AddFunction<bool>("isGameOver", getGameOver);
+        diagRunner.AddFunction<bool>("TheGameIsOver", TheGameIsOver);
+
+        diagRunner.AddFunction<bool>("almostDone", getAlmostDone);
+        diagRunner.AddFunction<bool>("SetAlmostDone", SetAlmostDone);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (gameOver == true)
+        {
+            SceneManager.LoadScene("EndScene");
+        }
     }
 
 
@@ -80,12 +95,12 @@ public class PlayerManager : MonoBehaviour
 
     public bool getTalkedToBartender()
     {
-        return talkedToBouncer;
+        return talkedToBartender;
     }
 
     public bool TalkedToBartender()
     {
-        talkedToBouncer = true;
+        talkedToBartender = true;
         return true;
     }
 
@@ -137,8 +152,32 @@ public class PlayerManager : MonoBehaviour
         return true;
     }
 
+    //Gameover Script
+
+    public bool getAlmostDone()
+    {
+        return almostDone;
+    }
+    [YarnCommand("SetAlmostDone")]
+    public bool SetAlmostDone()
+    {
+        almostDone = true;
+        return true;
+    }
 
 
+    public bool getGameOver()
+    {
+
+        return gameOver;
+    }
+
+    [YarnCommand("TheGameIsOver")]
+    public bool TheGameIsOver()
+    {
+        gameOver = true;
+        return true;
+    }
 
     public bool getHasThing()
     {

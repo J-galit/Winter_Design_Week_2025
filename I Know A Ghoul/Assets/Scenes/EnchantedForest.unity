@@ -11269,10 +11269,13 @@ MonoBehaviour:
   hasThing: 0
   visitSpot: 0
   talkedToBouncer: 0
+  talkedToBartender: 0
   talkedToPhotographer: 0
   hasSignature: 0
   hasDrink: 0
   canTalkToMillie: 0
+  gameOver: 0
+  almostDone: 0
 --- !u!4 &1533529304
 Transform:
   m_ObjectHideFlags: 0
@@ -11762,6 +11765,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8037823459886092211, guid: ad54d9ee33a13524b9ce122714269506, type: 3}
   m_PrefabInstance: {fileID: 1591649720}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1593213348
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1593213349}
+  m_Layer: 0
+  m_Name: MillieTeleport
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1593213349
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1593213348}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
+  m_LocalPosition: {x: -16.241, y: 1.771, z: 52.871}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!1001 &1612964668
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15327,6 +15361,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f531ecfb8d511cc468d7c741fe6ad221, type: 3}
+--- !u!1 &7901720287797412595 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7019393751464918443, guid: f531ecfb8d511cc468d7c741fe6ad221, type: 3}
+  m_PrefabInstance: {fileID: 7901720287797412594}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7901720287797412596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7901720287797412595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 250e467444c65ea43afc08d8c2435b0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1533529302}
+  playerManager: {fileID: 1533529303}
+  teleportPoint: {fileID: 1593213349}
 --- !u!1001 &7903555536897398481
 PrefabInstance:
   m_ObjectHideFlags: 0

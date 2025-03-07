@@ -32,7 +32,7 @@ public class PhoneManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P))
         {
 
-            phoneActive = !phoneActive;
+            //phoneActive = !phoneActive;
 
         }
 

@@ -1,7 +1,9 @@
 ﻿title: BouncerScript
 tags:
 ---
-<<if get_spoken_to_playerB()>>
+<<if almostDone()>>
+    <<jump KnowsAGhoul>>
+<<elseif get_spoken_to_playerB()>>
     <<jump HasSpokenToBouncer>>
 <<else>>
     <<jump HasNotSpokenToBouncer>>
@@ -29,5 +31,14 @@ Pavlo: *raises eyebrow, says nothing.*
 
 <<call player_has_spoken_to_Bouncer()>>
 <<call TalkedToBouncer()>>
+
+===
+
+title: KnowsAGhoul
+position:
+---
+Pavlo: I thought we went through this already, bub.
+You: I told you, I know a Ghoul.
+<<call TheGameIsOver()>>
 
 ===

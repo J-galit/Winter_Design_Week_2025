@@ -19,7 +19,7 @@ Sigma: Have you found the spot yet?
 title: HasNotSpokenToPhotographer
 position: -165,145
 ---
--> What's up brother?
+You: What's up brother?
 Sigma: Brother? It's Sigma to you, punk!
 <<if getTalkedToBouncer()>>
     -> OK, sorry. Look I need your help.

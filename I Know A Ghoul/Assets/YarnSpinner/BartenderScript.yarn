@@ -2,10 +2,13 @@
 tags:
 position: -381,-259
 ---
+
 <<if HasSignature()>>
     <<jump HasSignature>>
-<<else>>
+<<elseif getTalkedToBouncer()>>
     <<jump FavouriteDrinkUnknown>>
+<<else>>
+    <<jump NoMoney>>
 <<endif>> 
 ===
 
@@ -52,4 +55,13 @@ position: 311,-146
 ---
 Tabby: A bit basic, but who am I to say, I just make the drink.
 <<call givePinkDrink()>>
+===
+ title: NoMoney
+ position:
+ ---
+ Tabby: What's your poison?
+-> Can I get a drink please?
+    Tabby: Sure thing, it'll be $5
+        -> Shit, I've got no money.
+            Tabby: No money, no drink.
 ===

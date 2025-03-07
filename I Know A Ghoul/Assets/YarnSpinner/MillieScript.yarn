@@ -13,6 +13,7 @@ tags:
     -> I'd love a drink right now, a Djinn and Tonic would slap.
     Millie: I feel the same way, they make such great Djinn and Tonics, I could drink them all night. Say, why don't you tag along with us to the VIP section. The drinks will be on me.
     -> That would be great, thanks!
+    <<call SetAlmostDone()>>
 <<else>>
     You: She can't hear me over the music.
 <<endif>>
