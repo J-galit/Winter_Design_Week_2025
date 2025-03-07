@@ -127,7 +127,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.7137255, g: 0, b: 1, a: 1}
-  m_Intensity: 14.48
+  m_Intensity: 4.8
   m_Range: 50
   m_SpotAngle: 60
   m_InnerSpotAngle: 6
@@ -286,7 +286,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -9.947, y: 8.257, z: 40.517}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1939660887022772738}
   - {fileID: 4030679208557589986}
