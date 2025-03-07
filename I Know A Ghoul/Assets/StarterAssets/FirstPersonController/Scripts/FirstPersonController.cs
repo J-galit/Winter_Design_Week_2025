@@ -332,7 +332,7 @@ namespace StarterAssets
             if (Physics.Raycast(_mainCamera.transform.position, _mainCamera.transform.forward, out _hit, raycastDistance, npcLayer))
             {
 				print("hit");
-                if (_input.interact)
+                if (_input.interact && isTalking == false)
 				{
                     GameObject hitObject = _hit.collider.gameObject;
                     InteractScript characterScript = hitObject.GetComponent<InteractScript>();
